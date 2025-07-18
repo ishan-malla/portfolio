@@ -44,6 +44,7 @@ nav a {
 .hero {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -164,4 +165,38 @@ button svg {
   width: 20rem;
   display: flex;
   gap: 1rem;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.project-showcase {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  width: 50%;
+}
+
+#projects h2 {
+  font-size: 1.75rem;
+  text-decoration: underline;
+}
+
+#projects img {
+  border-radius: 4%;
+}
+
+.project-showcase p {
+  margin-top: 5%;
+  width: 90%;
+  font-size: 0.9rem;
+  line-height: 1.4rem;
 }
