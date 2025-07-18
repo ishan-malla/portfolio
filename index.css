@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: #272727;
-  --secondary-color: #696773;
+  --secondary-color: #726da8;
   --font: "Roboto", sans-serif;
   --font-color: #eff1f3;
 }
@@ -18,15 +18,15 @@
 
 nav {
   width: 100vw;
-  /* background-color: ; */
   display: flex;
   justify-content: space-between;
   padding: 2% 10%;
 }
 
 nav h1 {
-  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
+
 nav ul {
   display: flex;
   width: 25%;
@@ -34,8 +34,88 @@ nav ul {
   list-style: none;
   font-weight: 500;
 }
+
 nav a {
   text-decoration: none;
   color: var(--font-color);
   font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  padding: 2rem 1rem;
+  justify-content: center;
+}
+
+#card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  height: 100%;
+  padding: 1%;
+}
+
+#card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--secondary-color);
+}
+
+#card div {
+  display: flex;
+  width: 50%;
+  padding: 4px;
+  gap: 0.5rem;
+  background-color: transparent;
+}
+
+#card span {
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+#about > div:last-child {
+  flex: 1;
+  min-width: 300px;
+}
+
+#about h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+#about h2 span {
+  color: var(--secondary-color);
+}
+
+#about-me p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.3px;
+  color: var(--font-color);
+  max-width: 60ch;
+  font-weight: 400;
 }
