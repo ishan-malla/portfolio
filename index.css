@@ -84,7 +84,7 @@ main {
 #card div {
   display: flex;
   width: 50%;
-  padding: 4px;
+  padding: 10px;
   gap: 0.5rem;
   background-color: transparent;
 }
@@ -118,4 +118,50 @@ main {
   color: var(--font-color);
   max-width: 60ch;
   font-weight: 400;
+}
+
+button {
+  width: 8rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  margin-top: 4rem;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+}
+
+.btn-primary:hover {
+  background-color: #8a84c4;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: #1a1a1a;
+  color: var(--font-color);
+}
+
+.btn-secondary:hover {
+  background-color: #0f0f0f;
+  transform: translateY(-1px);
+}
+
+button svg {
+  background-color: transparent;
+}
+
+.button-section {
+  width: 20rem;
+  display: flex;
+  gap: 1rem;
 }
