@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100..900&family=Roboto:ital,wght@0,100..900&display=swap");
 
 :root {
-  --primary-color: #272727;
+  --primary-color: #1a1a1a;
   --secondary-color: #726da8;
   --font: "Roboto", sans-serif;
-  --font-color: #eff1f3;
+  --font-color: #9aa3a3;
 }
 
 * {
@@ -16,11 +16,15 @@
   color: var(--font-color);
 }
 
+body {
+  width: 100%;
+}
+
 nav {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 2% 10%;
+  padding: 2rem 5vw;
 }
 
 nav h1 {
@@ -29,8 +33,7 @@ nav h1 {
 
 nav ul {
   display: flex;
-  width: 25%;
-  justify-content: space-evenly;
+  gap: 2rem;
   list-style: none;
   font-weight: 500;
 }
@@ -43,40 +46,36 @@ nav a {
 
 .hero {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 2rem 0;
 }
 
 main {
   width: 100%;
+  padding-inline: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* About Section */
 #about {
   display: flex;
   flex-wrap: wrap;
-  gap: 8rem;
-  padding: 2rem 1rem;
-  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 5vw;
+  justify-content: space-between;
+  width: 90%;
 }
 
 #card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 1rem;
-  height: 100%;
   padding: 1%;
 }
 
 #card img {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   object-fit: cover;
   background-color: var(--secondary-color);
@@ -84,9 +83,8 @@ main {
 
 #card div {
   display: flex;
-  width: 50%;
-  padding: 10px;
   gap: 0.5rem;
+  padding: 10px;
   background-color: transparent;
 }
 
@@ -95,14 +93,17 @@ main {
   border-radius: 4px;
   font-weight: bold;
 }
-
+#about {
+  display: flex;
+  justify-content: space-between;
+}
 #about > div:last-child {
   flex: 1;
   min-width: 300px;
 }
 
 #about h2 {
-  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   font-weight: 700;
   margin-bottom: 1.2rem;
 }
@@ -113,17 +114,22 @@ main {
 
 #about-me p {
   font-size: 1.1rem;
-  line-height: 1.4;
-  margin-bottom: 0.8rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
   letter-spacing: 0.3px;
-  color: var(--font-color);
-  max-width: 60ch;
+  max-width: 75ch;
   font-weight: 400;
+}
+
+.button-section {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 button {
   width: 8rem;
-  height: 2rem;
+  height: 2.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +140,6 @@ button {
   font-weight: 500;
   font-size: 0.85rem;
   transition: all 0.3s ease;
-  margin-top: 4rem;
 }
 
 .btn-primary {
@@ -161,42 +166,44 @@ button svg {
   background-color: transparent;
 }
 
-.button-section {
-  width: 20rem;
-  display: flex;
-  gap: 1rem;
-}
-
 #projects {
+  width: 100%;
+  padding: 4rem 5vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 2rem;
-}
-
-.project-showcase {
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  padding: 1rem;
-  justify-content: center;
-  width: 50%;
+  align-items: flex-start;
 }
 
 #projects h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   text-decoration: underline;
+  margin-bottom: 2rem;
 }
 
-#projects img {
+.project-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.project-showcase img {
+  width: 100%;
+  height: 90%;
   border-radius: 4%;
 }
 
 .project-showcase p {
-  margin-top: 5%;
-  width: 90%;
-  font-size: 0.9rem;
-  line-height: 1.4rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+}
+
+.about-card {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+.about-card h2 {
+  padding: 10px;
 }
