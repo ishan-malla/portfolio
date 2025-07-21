@@ -11,7 +11,7 @@ downloadCv.addEventListener("click", () => {
 });
 
 copyMail.addEventListener("click", () => {
-  const email = "ishanjungmall@gmail.com";
+  const email = "ishanjungmalla@gmail.com";
   navigator.clipboard
     .writeText(email)
     .then(() => {
