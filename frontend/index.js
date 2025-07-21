@@ -4,11 +4,8 @@ const burgerMenu = document.getElementsByClassName("burger-menu")[0];
 const mobileNav = document.getElementsByClassName("mobile-nav")[0];
 const contactForm = document.getElementsByClassName("contact-form")[0];
 
-downloadCv.addEventListener("click", () => {
-  const link = document.createElement("a");
-  link.href = "assets/Ishan_Jung_Malla_resume.pdf";
-  link.download = "Ishan_Jung_Malla_resume.pdf";
-  link.click();
+downloadCv.addEventListener("click", async () => {
+  window.location.href = "http://localhost:3000/api/downloads/resume";
 });
 
 copyMail.addEventListener("click", () => {

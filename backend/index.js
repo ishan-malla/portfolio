@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Form = require("./form.model.js");
 const app = express();
+const path = require("path");
 const cors = require("cors");
 app.listen(3000, () => {
   console.log("Server is running");
@@ -19,10 +20,22 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+app.get("/api/downloads/resume", (req, res) => {
+  const resumePath = path.join(
+    __dirname,
+    "files",
+    "Ishan_Jung_Malla_resume.pdf"
+  );
+  res.download(resumePath, "Ishan_Jung_Malla_resume.pdf", (err) => {
+    if (err) {
+      console.error("Download error:", err);
+      res.status(500).send("Error downloading file.");
+    }
+  });
+});
+
 mongoose
-  .connect
-  //
-  ()
+  .connect()
   .then(() => {
     console.log("Connected");
   })
