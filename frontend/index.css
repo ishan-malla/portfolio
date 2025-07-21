@@ -76,6 +76,7 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding: 1%;
+  align-items: center;
 }
 
 .card img {
@@ -97,6 +98,10 @@ main {
   padding: 0.5rem;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.card span:hover {
+  background-color: #333;
 }
 #about {
   display: flex;

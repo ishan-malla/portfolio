@@ -53,3 +53,9 @@ contactForm.addEventListener("submit", async (e) => {
     alert("Something went wrong.");
   }
 });
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 768) {
+    mobileNav.classList.remove("toggle");
+  }
+});

@@ -20,9 +20,9 @@ app.post("/api/contact", async (req, res) => {
 });
 
 mongoose
-  .connect(
-    "mongodb+srv://ishanktm90:iPd9YW9E5b7OEDiE@backenddb.snml82l.mongodb.net/Node-API?retryWrites=true&w=majority&appName=backendDB"
-  )
+  .connect
+  //
+  ()
   .then(() => {
     console.log("Connected");
   })
