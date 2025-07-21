@@ -290,3 +290,45 @@ button svg {
 .tech-icon:hover svg {
   transform: scale(1.1);
 }
+
+@media (max-width: 870px) {
+  main {
+    padding: 4%;
+    margin-left: 0;
+  }
+
+  #about {
+    width: 100vw;
+    padding-left: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+
+  #about {
+    padding: 1rem 4rem;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: flex;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+}
+
+.burger-menu {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+}
